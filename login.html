@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Sign Up - Golden Leaf Bookshop</title>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #006400, #ffd700);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .auth-container {
+      background: white;
+      color: #333;
+      padding: 30px 40px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      text-align: center;
+      color: #006400;
+      margin-bottom: 20px;
+    }
+
+    .mdl-textfield {
+      width: 100%;
+    }
+
+    .auth-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .auth-actions .mdl-button {
+      border-radius: 25px;
+      background-color: #006400;
+      color: white;
+    }
+
+    .auth-actions .mdl-button:hover {
+      background-color: #004d00;
+    }
+
+    .switch-link, .forgot-link {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #006400;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-container">
+    <!-- Login Form -->
+    <div id="login-form">
+      <h2>Login</h2>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="email" id="login-email">
+        <label class="mdl-textfield__label" for="login-email">Email</label>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="password" id="login-password">
+        <label class="mdl-textfield__label" for="login-password">Password</label>
+      </div>
+
+      <div class="auth-actions">
+        <button class="mdl-button mdl-js-button mdl-button--raised" onclick="login()">Login</button>
+      </div>
+
+      <span class="forgot-link" onclick="alert('Password reset link sent!')">Forgot Password?</span>
+      <span class="switch-link" onclick="toggleForm()">Don't have an account? Sign Up</span>
+    </div>
+
+    <!-- Sign-Up Form -->
+    <div id="signup-form" class="hidden">
+      <h2>Sign Up</h2>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="email" id="signup-email">
+        <label class="mdl-textfield__label" for="signup-email">Email</label>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="password" id="signup-password">
+        <label class="mdl-textfield__label" for="signup-password">Password</label>
+      </div>
+
+      <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="password" id="signup-confirm">
+        <label class="mdl-textfield__label" for="signup-confirm">Confirm Password</label>
+      </div>
+
+      <div class="auth-actions">
+        <button class="mdl-button mdl-js-button mdl-button--raised" onclick="signup()">Sign Up</button>
+      </div>
+
+      <span class="switch-link" onclick="toggleForm()">Already have an account? Login</span>
+    </div>
+  </div>
+
+  <script>
+    function toggleForm() {
+      document.getElementById('login-form').classList.toggle('hidden');
+      document.getElementById('signup-form').classList.toggle('hidden');
+    }
+
+    function login() {
+      // Simulate login success
+      alert("Login successful!");
+      window.location.href = "books.html";
+    }
+
+    function signup() {
+      const password = document.getElementById('signup-password').value;
+      const confirm = document.getElementById('signup-confirm').value;
+      if (password !== confirm) {
+        alert("Passwords do not match!");
+        return;
+      }
+      alert("Account created successfully!");
+      window.location.href = "books.html";
+    }
+  </script>
+
+</body>
+</html>

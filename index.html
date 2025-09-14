@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookshop Landing Page</title>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #006400, #ffd700);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 7rem;
+      font-weight: bold;
+      font-family: 'Arial', Helvetica, sans-serif;
+      color: #006400;
+    }
+
+    p {
+      font-size: 1.4rem;
+      margin-top: -15px;
+      margin-bottom: 30px;
+      max-width: 780px;
+      font-family: 'Helvetica', sans-serif;
+      color: #ffd700;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .mdl-button {
+      background-color: #006400;
+      color: yellow;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 25px;
+      width: 160px;
+      height: 50px;
+      font-weight: 200;
+      font-size: 14px;
+      border: 1px solid yellow;
+      transition: all 0.3s ease;
+    }
+
+    .mdl-button:hover {
+    border: 1px solid #006400;
+    background-color: #006400;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Golden Leaf Bookshop</h1>
+  <p>Welcome to your next great read. Discover thought-provoking articles and hand-picked books to elevate your mind.</p>
+
+  <a href="articles.html">
+    <button class="mdl-button mdl-js-button mdl-button--raised">
+      Get Started
+    </button>
+  </a>
+
+</body>
+</html>
